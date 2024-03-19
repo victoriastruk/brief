@@ -12,3 +12,6 @@ h1 {
 #briefsContainer {
     margin-top: 20px;
 }
+.brief-row td {
+    padding: 5px; 
+}

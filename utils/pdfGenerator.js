@@ -1,7 +1,7 @@
 const PDFDocument = require('pdfkit');
 
 exports.generatePDF = async (formData) => {
-    const doc = new PDFDocument;
+    const doc = new PDFDocument();
     let buffers = [];
     doc.on('data', buffers.push.bind(buffers));
     doc.on('end', () => {
@@ -9,11 +9,11 @@ exports.generatePDF = async (formData) => {
         return pdfData;
     });
 
-    doc.text('Form Responses:', {
+    doc.text('Форма відповідей:', {
         underline: true
     });
 
-    doc.text(`Contact Name: ${formData.contactName}`, 100, 100);
+    doc.text(`Контактна особа(ПІБ): ${formData.contactName}`, 100, 100);
     // Тут  продовжити додавати інформацію з formData
 
     doc.end();

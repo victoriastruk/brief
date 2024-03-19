@@ -4,15 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     async function fetchBriefs() {
         try {
             const response = await fetch('/api/briefs');
-            const briefs = await response.json();
-            const container = document.getElementById('briefsContainer');
-            container.innerHTML = ''; 
-            
-            briefs.forEach(brief => {
-                const div = document.createElement('div');
-                div.innerHTML = `Brief ID: ${brief._id} <button onclick="downloadPDF('${brief._id}')">Download PDF</button>`;
-                container.appendChild(div);
-            });
+            if(response.ok){
+                const briefs = await response.json();
+                const container = document.getElementById('briefsContainer');
+                container.innerHTML = ''; 
+                
+                briefs.forEach(brief => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${brief.contactName}</td>
+                        <td>
+                            <button onclick="downloadPDF('${brief._id}')">Завантажити PDF</button>
+                        </td>
+                        <td>
+                            <button onclick="deleteBrief('${brief._id}')">Видалити</button>
+                        </td>
+                    `;
+
+                    tr.classList.add('brief-row');
+                    container.appendChild(tr);
+                });
+            } 
+           
         } catch (error) {
             console.error('Error fetching briefs:', error);
         }
@@ -33,6 +46,22 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.removeChild(a);
         } catch (error) {
             console.error('Error downloading PDF:', error);
+        }
+    };
+
+    window.deleteBrief = async (briefId) => {
+        try {
+            const response = await fetch(`/api/briefs/${briefId}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                // Перезавантаження списку брифів після видалення
+                fetchBriefs();
+            } else {
+                console.error('Failed to delete brief:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error deleting brief:', error);
         }
     };
 });
