@@ -1,6 +1,6 @@
 /* css/style.css */
 body, html {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -48,7 +48,16 @@ input[type="email"]{
     border: 1px solid #ccc; /* Межа поля введення */
     border-radius: 4px; /* Закруглені кути поля введення */
 }
-
+textarea {
+    width: 83vw; /* Ширина поля введення */
+    padding: 10px; /* Внутрішній відступ поля введення */
+    border: 1px solid #ccc; /* Межа поля введення */
+    border-radius: 4px; /* Закруглені кути поля введення */
+}
+.age-options{
+    display: flex;
+    justify-content: space-between;
+}
 button[type="submit"] {
     background-color: #007bff; /* Фоновий колір кнопки */
     color: #ffffff; /* Колір тексту кнопки */
