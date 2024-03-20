@@ -3,12 +3,13 @@ const mongoose = require('mongoose');
 
 const formSchema = new mongoose.Schema({
   contactName: String,
-//   position: String,
-//   phone: String,
-//   email: String,
-//   additionalContacts: String,
-//   communicationPeriod: String,
-//   companyName: String,
+  position: String,
+  phone: String,
+  email: String,
+  additionalContacts: String,
+  communicationPeriod: String,
+  
+  // companyName: String,
 //   businessArea: String,
 //   companyPositioning: String,
 //   mainProducts: String,

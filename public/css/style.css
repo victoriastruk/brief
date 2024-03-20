@@ -1,42 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
+/* css/style.css */
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Фоновий колір сторінки */
 }
 
-h2{
+.container {
+    width: 100%;
+    min-width: 85vw; /* Максимальна ширина контейнера для форми */
+    padding: 20px;
+    background-color: #ffffff; /* Фоновий колір контейнера */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь навколо контейнера */
+    border-radius: 8px; /* Закруглені кути контейнера */
+}
+h1{
     text-align: center;
 }
 
+h2{
+    color: #657b65;
+    margin-bottom: 0;
+}
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Відступи між полями форми */
+}
+.wrapper{
+    display: flex;
+    /* gap: 15px; */
+    align-items: center;
+    justify-content: space-around;
 }
 
 label {
-    display: block;
+    display: block; /* Робить етикетку блоковим елементом */
     margin-bottom: 5px;
+    margin-top: 15px; /* Відступ між етикеткою та полем введення */
 }
 
 input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+input[type="tel"],
+input[type="email"]{
+    width: 40vw; /* Ширина поля введення */
+    padding: 10px; /* Внутрішній відступ поля введення */
+    border: 1px solid #ccc; /* Межа поля введення */
+    border-radius: 4px; /* Закруглені кути поля введення */
 }
 
 button[type="submit"] {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #007bff; /* Фоновий колір кнопки */
+    color: #ffffff; /* Колір тексту кнопки */
+    padding: 10px 20px; /* Внутрішній відступ кнопки */
+    border: none; /* Видалення межі кнопки */
+    border-radius: 4px; /* Закруглені кути кнопки */
+    cursor: pointer; /* Курсор у вигляді покажчика при наведенні на кнопку */
 }
 
 button[type="submit"]:hover {
-    background-color: #004494;
+    background-color: #0056b3; /* Фоновий колір кнопки при наведенні */
 }

@@ -2,7 +2,13 @@ document.getElementById('projectBriefForm').addEventListener('submit', function(
     e.preventDefault();
 
     const formData = {
-        contactName: document.getElementById('contactName').value // Отримати значення поля "Контактна особа(ПІБ)"
+        contactName: document.getElementById('contactName').value, // Отримати значення поля "Контактна особа(ПІБ)"
+        position: document.getElementById('position').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        additionalContacts: document.getElementById('additionalContacts').value,
+        communicationPeriod: document.getElementById('communicationPeriod').value,
+        
         // Додати інші поля тут 
     };
 
