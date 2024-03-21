@@ -19,7 +19,6 @@ exports.generatePDF = async (formData) => {
         underline: true
     });
 
-    // Рядки з відомостями
     doc.text(`Контактна особа(ПІБ): ${formData.contactName}`);
     doc.text(`Посада: ${formData.position}`);
     doc.text(`Телефон: ${formData.phone}`);
@@ -53,6 +52,53 @@ exports.generatePDF = async (formData) => {
     if (formData.targetAudience.over65) ageRanges.push('Більше 65');
 
     doc.text(`Вік: ${ageRanges.join(', ')}`);
+  
+    const gender = [];
+    if (formData.gender.female) gender.push('жіноча');
+    if (formData.gender.male) gender.push('чоловіча');
+    doc.text(`Стать: ${gender.join(', ' )}`);
+    doc.text(`Рід занять: ${formData.targetAudienceOccupation}`);
+
+    const incomeRanges = [];
+    if (formData.targetAudienceIncome.income1000_5000) incomeRanges.push('1 000 - 5 000');
+    if (formData.targetAudienceIncome.income5000_10000) incomeRanges.push('5 000 - 10 000');
+    if (formData.targetAudienceIncome.income10000_15000) incomeRanges.push('10 000 - 15 000');
+    if (formData.targetAudienceIncome.income15000_20000) incomeRanges.push('15 000 - 20 000');
+    if (formData.targetAudienceIncome.income20000_25000) incomeRanges.push('20 000 - 25 000');
+    if (formData.targetAudienceIncome.over25000) incomeRanges.push('більше 25 000');
+
+    doc.text(`Дохід(грн): ${incomeRanges.join(', ')}`);
+    doc.text(`Як вирішують стати клієнтом Вашої компанії?`);
+    doc.text(formData.clientDecision);
+    doc.text(`Навіщо їм потрібний Ваш сайт?`);
+    doc.text(formData.siteNecessity);
+
+    const customerNecessery = [];
+    if (formData.custonerNessery.brandingGoal) customerNecessery.push('Імміджева мета');
+    if (formData.custonerNessery.brandingGoal) customerNecessery.push('Інформування споживачів');
+    if (formData.custonerNessery.clientPartnerEngagement) customerNecessery.push('Залучення клієнтів/партнерів');
+    if (formData.custonerNessery.onlineSales) customerNecessery.push('Продаж товарів через Інтернет');
+    if (formData.custonerNessery.advertisingRevenue) customerNecessery.push('Прибуток від реклами');
+    if (formData.custonerNessery.expansionToNewMarkets) customerNecessery.push('Вихід на нові ринки');
+    if (formData.custonerNessery.consumerFeedback) customerNecessery.push(`Зворотний зв'язок із споживачем`);
+    doc.text(`Для чого Вам потрібен сайт:`,{ 
+        underline: true
+    });
+    doc.text(customerNecessery.join(', ' ));
+
+    const typeSite = [];
+    if (formData.typeSite.singlePageWebsite) typeSite.push("Односторінковий сайт");
+    if (formData.typeSite.businessCardWebsite) typeSite.push("Сайт візитівка");
+    if (formData.typeSite.landingPage) typeSite.push("Landing page");
+    if (formData.typeSite.onlineStore) typeSite.push("Інтернет магазин");
+    if (formData.typeSite.catalogWebsite) typeSite.push("Сайт каталогів");
+    if (formData.typeSite.corporateWebsite) typeSite.push("Корпоративний сайт");
+    if (formData.typeSite.uniqueWebsite) typeSite.push("Унікальний сайт");
+    if (formData.typeSite.frameworkWebsite) typeSite.push("Сайт на Framework");
+    doc.text(`Тип сайту:`,{ 
+        underline: true
+    });
+    doc.text(typeSite.join(', ' ));
 
     doc.end();
 

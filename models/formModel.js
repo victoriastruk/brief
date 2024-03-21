@@ -14,6 +14,40 @@ const targetAudienceSchema = new mongoose.Schema({
   over65: { type: Boolean, default: false }
 });
 
+const genderSchema = new mongoose.Schema({
+  female: { type: Boolean, default: false },
+  male: { type: Boolean, default: false }
+})
+
+const targetAudienceIncomeSchema = new mongoose.Schema({
+  income1000_5000: { type: Boolean, default: false },
+  income5000_10000: { type: Boolean, default: false },
+  income10000_15000: { type: Boolean, default: false },
+  income15000_20000: { type: Boolean, default: false },
+  income20000_25000: { type: Boolean, default: false },
+  over25000: { type: Boolean, default: false },
+})
+
+const custonerNesserySchema = new mongoose.Schema({
+  brandingGoal: {type: Boolean, default: false},
+  consumerInforming:{type: Boolean, default: false},
+  clientPartnerEngagement:{type: Boolean, default: false},
+  onlineSales:{type: Boolean, default: false},
+  advertisingRevenue:{type: Boolean, default: false},
+  expansionToNewMarkets:{type: Boolean, default: false},
+  consumerFeedback:{type: Boolean, default: false},
+})
+
+const typeSiteSchema = new mongoose.Schema({
+  singlePageWebsite: {type: Boolean, default: false},
+  businessCardWebsite: {type: Boolean, default: false},
+  landingPage: {type: Boolean, default: false},
+  onlineStore: {type: Boolean, default: false},
+  catalogWebsite: {type: Boolean, default: false},
+  corporateWebsite: {type: Boolean, default: false},
+  uniqueWebsite: {type: Boolean, default: false},
+  frameworkWebsite: {type: Boolean, default: false},
+})
 const formSchema = new mongoose.Schema({
   contactName: String,
   position: String,
@@ -29,10 +63,16 @@ const formSchema = new mongoose.Schema({
   companyAdvantages: String,
 
   targetAudience: targetAudienceSchema,
-//   targetAudienceAge: [String],
-//   targetAudienceGender: String,
-//   targetAudienceOccupation: String,
-//   targetAudienceIncome: [String],
+  gender: genderSchema,
+  targetAudienceOccupation: String,
+  targetAudienceIncome:  targetAudienceIncomeSchema,
+  clientDecision: String,
+  siteNecessity: String,
+  custonerNessery: custonerNesserySchema,
+  typeSite: typeSiteSchema,
+
+
+
 //   websitePurpose: [String],
 //   websiteType: String,
 //   hasWebsiteStructure: Boolean,

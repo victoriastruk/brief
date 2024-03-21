@@ -5,7 +5,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Фоновий колір сторінки */
+    background-color: #4c899c; /* Фоновий колір сторінки */
 }
 
 .container {
@@ -17,12 +17,19 @@ body, html {
     border-radius: 8px; /* Закруглені кути контейнера */
 }
 h1{
+    color: #035b5e;
     text-align: center;
 }
 
 h2{
-    color: #657b65;
+    color: #068488;
     margin-bottom: 0;
+}
+h3{
+    margin-bottom: 0;
+}
+label{
+    font-size: 18px;
 }
 .form-group {
     margin-bottom: 15px; /* Відступи між полями форми */
@@ -54,9 +61,36 @@ textarea {
     border: 1px solid #ccc; /* Межа поля введення */
     border-radius: 4px; /* Закруглені кути поля введення */
 }
-.age-options{
+.age-options, .language-options, .options-items{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    gap: 40px;
+}
+.gender{
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+}
+.income-options{
+    display: flex;
+    justify-content: left;
+    gap: 50px;
+    width: 80vw;
+}
+.typeSite-options{
+    display: flex;
+    justify-content: left;
+    gap: 50px;
+}
+.designing-options{
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+}
+.options-itemS{
+    display: flex;
+    justify-content: left;
+    gap: 90px;
 }
 button[type="submit"] {
     background-color: #007bff; /* Фоновий колір кнопки */

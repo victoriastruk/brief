@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бриф</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <form id="projectBriefForm" action="/submit-form" method="POST">
             <h1>Бриф на розробку сайту</h1>
-            
-            <!-- Поле форми -->
             <div class="form-group">
                 <h2>Спосіб звʼязку</h2>
                 <div class="wrapper">
                     <div class="col-1">
                         <label for="contactName">Контактна особа(ПІБ): </label>
                         <input type="text" id="contactName" name="contactName" required>
-        
+
                         <label for="position">Посада: </label>
                         <input type="text" id="position" name="position" required>
-        
+
                         <label for="phone">Телефон: </label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
-                    
+
                     <div class="col-2">
                         <label for="email">Email: </label>
                         <input type="email" id="email" name="email" required>
-        
+
                         <label for="additionalContacts">Інше(Skype, Viber, Telegram тощо): </label>
                         <input type="text" id="additionalContacts" name="additionalContacts">
-        
+
                         <label for="communicationPeriod">Зручний період для спілкування: </label>
                         <input type="text" id="communicationPeriod" name="communicationPeriod" required>
                     </div>
-                </div>    
+                </div>
             </div>
-            
+
             <div class="form-group">
                 <h2>Інформація про компанію</h2>
                 <div class="wrapper">
                     <div class="col-1">
                         <label for="companyName">Назва компанії: </label>
                         <input type="text" id="companyName" name="companyName" required>
-        
+
                         <label for="businessArea">Сфера діяльності компанії: </label>
-                        <input type="text" id="businessArea" name="businessArea" required> 
+                        <input type="text" id="businessArea" name="businessArea" required>
                     </div>
-                    
+
                     <div class="col-2">
                         <label for="companyPositioning">Позиціонування компанії(ніша): </label>
                         <input type="text" id="companyPositioning" name="companyPositioning" required>
 
                         <label for="mainProducts">Основні продукти та послуги: </label>
-                        <input type="text" id="mainProducts" name="mainProducts" required>  
+                        <input type="text" id="mainProducts" name="mainProducts" required>
                     </div>
-                    
-                </div>  
-                    <label for="companyAdvantages">Переваги компанії:  </label>
-                    <textarea id="companyAdvantages" name="companyAdvantages"> </textarea> 
+
+                </div>
+                <label for="companyAdvantages">Переваги компанії: </label>
+                <textarea id="companyAdvantages" name="companyAdvantages"> </textarea>
             </div>
 
             <div class="form-group">
                 <h2>Цільова аудиторія</h2>
+                <h3>Вік: </h3>
                 <div class="age-options">
                     <div class="col-1">
                         <label for="age-under-16">
@@ -76,7 +77,7 @@
                             20-25
                         </label>
                     </div>
-                    
+
                     <div class="col-2">
                         <label for="age-30-35">
                             <input type="checkbox" id="age-30-35" name="age" value="30-35">
@@ -87,7 +88,7 @@
                             35-40
                         </label>
                     </div>
-                    
+
                     <div class="col-3">
                         <label for="age-40-45">
                             <input type="checkbox" id="age-40-45" name="age" value="40-45">
@@ -98,7 +99,7 @@
                             45-50
                         </label>
                     </div>
-                    
+
                     <div class="col-4">
                         <label for="age-50-55">
                             <input type="checkbox" id="age-50-55" name="age" value="50-55">
@@ -109,7 +110,7 @@
                             55-60
                         </label>
                     </div>
-                    
+
                     <div class="col-5">
                         <label for="age-60-65">
                             <input type="checkbox" id="age-60-65" name="age" value="60-65">
@@ -121,15 +122,669 @@
                         </label>
                     </div>
                 </div>
+                <h3>Стать: </h3>
+                <div class="gender">
+                    <div class="col-1">
+                        <label>
+                            <input id="female" type="checkbox" name="gender" value="female">
+                            Жіноча
+                        </label>
+                    </div>
+                    <div class="col-1">
+                        <label>
+                            <input id="male" type="checkbox" name="gender" value="male">
+                            Чоловіча
+                        </label>
+                    </div>
+                </div>
+                <label for="ctargetAudienceOccupation">Рід занять: </label>
+                <input type="text" id="targetAudienceOccupation" name="targetAudienceOccupation" required>
+                <h3>Дохід(грн): </h3>
+                <div class="income-options">
+                    <div class="col-1">
+                        <label for="income-1000-5000">
+                            <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                            1 000 - 5 000
+                        </label>
+                        <label for="income-5000-10000">
+                            <input type="checkbox" id="income-5000-10000" name="income" value="income-5000-10000">
+                            5 000 - 10 000
+                        </label>
+                    </div>
+
+                    <div class="col-2">
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            10 000 - 15 000
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            15 000 - 20 000
+                        </label>
+                    </div>
+
+                    <div class="col-3">
+                        <label for="income-20000-25000">
+                            <input type="checkbox" id="income-20000-25000" name="income" value="income-20000-25000">
+                            20 000 - 25 000
+                        </label>
+                        <label for="income-over-25000">
+                            <input type="checkbox" id="income-over-25000" name="income" value="income-over-25000">
+                            більше 25 000
+                        </label>
+                    </div>
+                </div>
+                <label for="clientDecision">Як вирішують стати клієнтом Вашої компанії? </label>
+                <textarea id="clientDecision" name="clientDecision"> </textarea>
+                <label for="siteNecessity">Навіщо їм потрібний Ваш сайт? </label>
+                <textarea id="siteNecessity" name="siteNecessity"> </textarea>
+
             </div>
-            
-            <!-- Дадати інші поля -->
-            
+            <div class="form-group">
+                <h2>Для чого Вам потрібен сайт</h2>
+                <div class="customerNessery-options">
+                    <label for="brandingGoal">
+                        <input type="checkbox" id="brandingGoal" name="brandingGoal" value="brandingGoal" />
+                        Імміджева мета
+                    </label>
+                    <label for="consumerInforming">
+                        <input type="checkbox" id="consumerInforming" name="consumerInforming"
+                            value="consumerInforming" />
+                        Інформування споживачів
+                    </label>
+                    <label for="clientPartnerEngagement">
+                        <input type="checkbox" id="clientPartnerEngagement" name="clientPartnerEngagement"
+                            value="clientPartnerEngagement" />
+                        Залучення клієнтів/партнерів
+                    </label>
+                    <label for="onlineSales">
+                        <input type="checkbox" id="onlineSales" name="onlineSales" value="onlineSales" />
+                        Продаж товарів через Інтернет
+                    </label>
+                    <label for="advertisingRevenue">
+                        <input type="checkbox" id="advertisingRevenue" name="advertisingRevenue"
+                            value="advertisingRevenue" />
+                        Прибуток від реклами
+                    </label>
+                    <label for="expansionToNewMarkets">
+                        <input type="checkbox" id="expansionToNewMarkets" name="expansionToNewMarkets"
+                            value="expansionToNewMarkets" />
+                        Вихід на нові ринки
+                    </label>
+                    <label for="consumerFeedback">
+                        <input type="checkbox" id="consumerFeedback" name="consumerFeedback" value="consumerFeedback" />
+                        Зворотний зв'язок із споживачем
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Тип сайту</h2>
+                <div class="typeSite-options">
+                    <div class="col-1">
+                        <label for="singlePageWebsite">
+                            <input type="radio" id="singlePageWebsite" name="singlePageWebsite"
+                                value="singlePageWebsite" />
+                            Односторінковий сайт
+                        </label>
+                        <label for="businessCardWebsite">
+                            <input type="radio" id="businessCardWebsite" name="businessCardWebsite"
+                                value="businessCardWebsite" />
+                            Сайт візитівка
+                        </label>
+                        <label for="landingPage">
+                            <input type="radio" id="landingPage" name="landingPage" value="landingPage" />
+                            Landing page
+                        </label>
+                        <label for="onlineStore">
+                            <input type="radio" id="onlineStore" name="onlineStore" value="onlineStore" />
+                            Інтернет магазин
+                        </label>
+                    </div>
+                    <div class="col-1">
+                        <label for="catalogWebsite">
+                            <input type="radio" id="catalogWebsite" name="catalogWebsite" value="catalogWebsite" />
+                            Сайт каталогів
+                        </label>
+                        <label for="corporateWebsite">
+                            <input type="radio" id="corporateWebsite" name="corporateWebsite"
+                                value="corporateWebsite" />
+                            Корпоративний сайт
+                        </label>
+                        <label for="uniqueWebsite">
+                            <input type="radio" id="uniqueWebsite" name="uniqueWebsite" value="uniqueWebsite" />
+                            Унікальний сайт
+                        </label>
+                        <label for="frameworkWebsite">
+                            <input type="radio" id="frameworkWebsite" name="frameworkWebsite"
+                                value="frameworkWebsite" />
+                            Сайт на Framework
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Структура сайту (проектування)</h2>
+                <div class="designing-options">
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="siteStructure" value="existing" required>
+                            У мене є готова структура
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="siteStructure" value="needed" required>
+                            Мені потрібне проектування
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <h2>Конкуренти</h2>
+                <label for="">Що унікального пропонуєте Ви у порівнянні з конкурентами, які переваги мають
+                    конкуренти?</label>
+                <textarea id="№" name=""> </textarea>
+                <label for="">Наведіть сайти конкурентів, які вам подобаються. Опишіть, що вам подобається і не
+                    подобається у сайтах конкурентів?</label>
+                <textarea id="№" name=""> </textarea>
+                <label for="">Які можливості сайтів конкурентів ви хотіли б побачити на своєму сайті?</label>
+                <textarea id="№" name=""> </textarea>
+            </div>
+            <div class="form-group">
+                <h2>Кольорова гама</h2>
+                <div class="wrapper">
+                    <div class="col-1">
+                        <label for="">Кольори, які слід використовувати </label>
+                        <input type="text" id="F" name="" required>
+                    </div>
+                    <div class="col-1">
+                        <label for="">Кольори, які не можна використовувати </label>
+                        <input type="text" id="F" name="" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Графіка, що переважає</h2>
+                <div class="designing-options">
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="siteStructure" value="existing" required>
+                            Фотографічні зображення
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="siteStructure" value="needed" required>
+                            Мальована графіка
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <h2>Анімація</h2>
+                <div class="income-options">
+                    <div class="col-1">
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            Іконки
+                        </label>
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            Перехід між сторінками
+                        </label>
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            Заставка перед сайтом
+                        </label>
+                    </div>
+
+                    <div class="col-2">
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            На розсуд дизайнера
+                        </label>
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            Логотип
+                        </label>
+                        <label for="">
+                            <input type="checkbox" id="" name="" value="">
+                            Меню
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Ідеї</h2>
+                <label for="">Чи є у вас ідеї, які Ви бажаєте втілити у дизайні?</label>
+                <textarea id="№" name=""> </textarea>
+                <label for="">Що Ви категорично не бажаєте бачити у дизайні сайту?</label>
+                <textarea id="№" name=""> </textarea>
+            </div>
+
+            <div class="form-group">
+                <h2>Необхідні сторінки сайту</h2>
+                <div class="income-options">
+                    <div class="col-1">
+                        <label for="income-1000-5000">
+                            <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                            Головна
+                        </label>
+                        <label for="income-5000-10000">
+                            <input type="checkbox" id="income-5000-10000" name="income" value="income-5000-10000">
+                            Про компанію
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Послуги
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Портфоліо (список реалізованих робіт / проектів)
+                        </label>
+                        <label for="income-20000-25000">
+                            <input type="checkbox" id="income-20000-25000" name="income" value="income-20000-25000">
+                            Наша команда (фото співробітників, ПІБ, посада, контакти)
+                        </label>
+                        <label for="income-over-25000">
+                            <input type="checkbox" id="income-over-25000" name="income" value="income-over-25000">
+                            Відгуки (про компанію, товар або послугу)
+                        </label>
+
+                        <label for="income-1000-5000">
+                            <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                            Каталог (список категорій, перелік товарів, картка товару)
+                        </label>
+                        <label for="income-5000-10000">
+                            <input type="checkbox" id="income-5000-10000" name="income" value="income-5000-10000">
+                            Новини (список новин, перегляд новини)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Статті (список статей, перегляд статті)
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Партнери / клієнти (Список партнерів / клієнтів з логотипами та коротким описом)
+                        </label>
+                        <label for="income-20000-25000">
+                            <input type="checkbox" id="income-20000-25000" name="income" value="income-20000-25000">
+                            Акції (список акцій, перегляд акції)
+                        </label>
+                        <label for="income-over-25000">
+                            <input type="checkbox" id="income-over-25000" name="income" value="income-over-25000">
+                            Вакансії (з формою відправки резюме)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Блог
+                        </label>
+
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Особистий кабінет (особова інформація, мої замовлення, мої підписки, переглянуті товари,
+                            редагування пароля, редагування інформації)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Список бажань (сторінка з обраними товарами)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Оплата та доставка (текст + супутня графіка)
+                        </label>
+
+                    </div>
+
+                    <div class="col-2">
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Фотогалерея (список альбомів, список фотографій, збільшене фото)
+                        </label>
+                        <label for="income-20000-25000">
+                            <input type="checkbox" id="income-20000-25000" name="income" value="income-20000-25000">
+                            Відеогалерея (список альбомів, список відео, перегляд відео)
+                        </label>
+                        <label for="income-over-25000">
+                            <input type="checkbox" id="income-over-25000" name="income" value="income-over-25000">
+                            Ціни, прайс-лист
+                        </label>
+
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Події, заходи (з категоріями, календарем)
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Ліцензії, сертифікати (розділ або окремий блок на головній)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Документи для скачування
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Контакти (форма зворотного зв'язку, карта, контактні дані)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Питання / Відповідь
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Форум (створення окремих тем для спілкування на сайті)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Опитування
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Сторінка результатів пошуку (за наявності пошуку на сайті)
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Сторінка 404 (унікальний зовнішній вигляд сторінки помилки)
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Карта сайту
+                        </label>
+
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Оформлення замовлення (авторизація, доставка, оплата, підтвердження замовлення, успішне
+                            оформлення замовлення)
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Порівняння товарів
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Необхідний функціонал сайту</h2>
+                <div class="income-options">
+                    <div class="col-1">
+                        <h3>Базові функції:</h3>
+                        <label for="income-1000-5000">
+                            <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                            Пошук по сайту
+                        </label>
+                        <label for="income-5000-10000">
+                            <input type="checkbox" id="income-5000-10000" name="income" value="income-5000-10000">
+                            Замовлення зворотного дзвінка
+                        </label>
+                        <label for="income-10000-15000">
+                            <input type="checkbox" id="income-10000-15000" name="income" value="income-10000-15000">
+                            Інтерактивна карта проїзду
+                        </label>
+                        <label for="income-15000-20000">
+                            <input type="checkbox" id="income-15000-20000" name="income" value="income-15000-20000">
+                            Віджети соц. Мереж
+                        </label>
+                        <label for="income-20000-25000">
+                            <input type="checkbox" id="income-20000-25000" name="income" value="income-20000-25000">
+                            Підписка на розсилку новин / статей
+                        </label>
+                        <label for="income-over-25000">
+                            <input type="checkbox" id="income-over-25000" name="income" value="income-over-25000">
+                            Онлайн-консультант
+                        </label>
+
+                        <label for="income-1000-5000">
+                            <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                            Внутрішня банерна реклама (використовується для акценту відвідувачів на цільових сторінках
+                            сайту - акції, розпродажі, бонуси, спецпропозиції)
+                        </label>
+
+                        <h3>Функціонал каталогу/інтернет-магазину:</h3>
+                        <div class="income-options">
+                            <div class="col-1">
+                                <label for="income-5000-10000">
+                                    <input type="checkbox" id="income-5000-10000" name="income"
+                                        value="income-5000-10000">
+                                    Спливаючий кошик товарів
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Швидкий перегляд товару
+                                </label>
+                                <label for="income-15000-20000">
+                                    <input type="checkbox" id="income-15000-20000" name="income"
+                                        value="income-15000-20000">
+                                    Реєстрація / Авторизація
+                                </label>
+                                <label for="income-20000-25000">
+                                    <input type="checkbox" id="income-20000-25000" name="income"
+                                        value="income-20000-25000">
+                                    Фільтр пошуку за каталогом (фільтр дозволяє відображати товари за певними
+                                    параметрами, наприклад за кольором, виробником, розміром тощо)
+                                </label>
+                                <label for="income-over-25000">
+                                    <input type="checkbox" id="income-over-25000" name="income"
+                                        value="income-over-25000">
+                                    Сортування за каталогом (модуль дозволяє сортувати товари за ціною, новизною,
+                                    популярністю.)
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Рекомендовані товари (з цим товаром також купують)
+                                </label>
+
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Розрахунок знижок (залежно від суми замовлення або за іншими критеріями)
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Система бронювання
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Онлайн приміряння" новинки, популярне
+                                </label>
+                                
+
+                            </div>
+                            <div class="col-2">
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Система сповіщення покупців про статус замовлення
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    СМС розсилання
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Системи оплати кредитними картками та електронними грошима
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Формування рахунку / квитанції для оплати
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Імпорт/Експорт даних з/в .XLS, .CSV, .XML
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Система підтримки клієнтів (система тикетів)
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Калькулятор розрахунку вартості (з відправкою розрахунку клієнту та
+                                    адміністратору сайту)
+                                </label>
+                                <label for="income-10000-15000">
+                                    <input type="checkbox" id="income-10000-15000" name="income"
+                                        value="income-10000-15000">
+                                    Автоматичне визначення географічного регіону відвідувача
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Мовні версії сайту</h2>
+                <div class="language-options">
+                    <label for="income-1000-5000">
+                        <input type="checkbox" id="income-1000-5000" name="income" value="income-1000-5000">
+                        Українська
+                    </label>
+                    <label for="income-5000-10000">
+                        <input type="checkbox" id="income-5000-10000" name="income" value="income-5000-10000">
+                        Англійська
+                    </label>
+                    <label for="contactName">Інші мови: </label>
+                    <input type="text" id="contactName" name="contactName">
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Підготовка контенту для сайту</h2>
+                <h3>Чи маєте Ви унікальні тексти для сайту? </h3>
+                <div class="options-items">
+           
+                        <label for="">
+                            <input type="radio" id="age" name="" value="">
+                           Є 
+                        </label>
+                        <label for="">
+                            <input type="radio" id="ag" name="" value="">
+                            Буде пізніше
+                        </label>
+                        <label for="">
+                            <input type="radio" id="ag" name="" value="">
+                            Потрібно написати
+                        </label>
+                    </div>
+                    <h3>Чи є у Вас якісні авторські фото для сайту? </h3>
+                    <div class="options-items">
+                            <label for="">
+                                <input type="radio" id="age" name="" value="">
+                               Так 
+                            </label>
+                            <label for="">
+                                <input type="radio" id="ag" name="" value="">
+                                Ні
+                            </label>
+                            <label for="">
+                                <input type="radio" id="ag" name="" value="">
+                               Будуть пізніше
+                            </label>
+                        </div>
+                        <h3>Чи є у Вас відео для сайту? </h3>
+                        <div class="options-items">
+                   
+                                <label for="">
+                                    <input type="radio" id="age" name="" value="">
+                                   Так 
+                                </label>
+                                <label for="">
+                                    <input type="radio" id="ag" name="" value="">
+                                    Ні
+                                </label>
+                                <label for="">
+                                    <input type="radio" id="ag" name="" value="">
+                                    Будуть пізніше
+                                </label>
+                            </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Подальший розвиток та реклама</h2>
+                <label for="contactName">Хто буде здійснювати підтримку та оновлення сайту? </label>
+                <input type="text" id="contactName" name="contactName">
+                <h3>Чи планується просування сайту у пошукових системах? </h3>
+                    <div class="options-items">
+                            <label for="">
+                                <input type="radio" id="age" name="" value="">
+                               Так 
+                            </label>
+                            <label for="">
+                                <input type="radio" id="ag" name="" value="">
+                                Ні
+                            </label>
+                            <label for="">
+                                <input type="radio" id="ag" name="" value="">
+                               Потрібна консультація
+                            </label>
+                        </div>
+                        <h3>Чи є у Вас відео для сайту? </h3>
+                        <div class="options-items">
+                   
+                                <label for="">
+                                    <input type="radio" id="age" name="" value="">
+                                   Так 
+                                </label>
+                                <label for="">
+                                    <input type="radio" id="ag" name="" value="">
+                                    Ні
+                                </label>
+                                <label for="">
+                                    <input type="radio" id="ag" name="" value="">
+                                    Потрібна консультація
+                                </label>
+                            </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Бюджет та терміни</h2>
+                <div class="options-itemS">
+                    <div class="">
+                        <label for="budgetRange">Очікуваний бюджет на розробку:</label>
+                        <input type="range" id="budgetRange" name="budgetRange" min="1000" max="100000" value="50000" step="1000" oninput="budgetValue.value = budgetRange.value">
+                        <output id="budgetValue">10000</output> грн.
+                    </div>
+                    <div class="">
+                        <label for="desiredDeadlineRange">Бажаний термін здачі проекту:</label>
+                        <input type="range" id="desiredDeadlineRange" name="desiredDeadlineRange" min="1" max="12" value="6" step="1" oninput="desiredDeadlineValue.value = desiredDeadlineRange.value">
+                        <output id="desiredDeadlineValue">6</output> місяців
+                    </div>
+                    <div class="">
+                        <label for="mandatoryDeadlineRange">Обов'язковий термін здачі проекту:</label>
+                        <input type="range" id="mandatoryDeadlineRange" name="mandatoryDeadlineRange" min="1" max="24" value="12" step="1" oninput="mandatoryDeadlineValue.value = mandatoryDeadlineRange.value">
+                        <output id="mandatoryDeadlineValue">12</output> місяців
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Додаткова інформація</h2>
+                    <label for="communicationPeriod">Ваші коментарі, запитання, побажання:</label>
+                    <textarea id="communicationPeriod" name="communicationPeriod"></textarea>
+            </div>
             <button type="submit">Відправити</button>
         </form>
     </div>
-    
+
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
