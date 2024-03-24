@@ -192,8 +192,8 @@ document.getElementById('projectBriefForm').addEventListener('submit', function 
 
         expectedBudget: document.getElementById('budgetRange').value,
         desiredProjectDeadline: document.getElementById('desiredDeadlineRange').value,
-        mandatoryProjectDeadline: document.getElementById('mandatoryDeadlineRange').value
-        // Додати інші поля тут 
+        mandatoryProjectDeadline: document.getElementById('mandatoryDeadlineRange').value,
+        additionally: document.getElementById('additionally').value,
     };
 
     fetch('/submit-form', {

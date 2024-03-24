@@ -226,7 +226,8 @@ const formSchema = new mongoose.Schema({
     required: true,
     min: 1,
     max: 24
-  }
+  },
+  additionally: String
 });
 
 const Form = mongoose.model('Form', formSchema);

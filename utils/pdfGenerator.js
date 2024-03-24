@@ -270,7 +270,10 @@ exports.generatePDF = async (formData) => {
     doc.text(`Очікуваний бюджет на розробку сайту в грн. : ${formData.expectedBudget}`);
     doc.text(`Бажаний термін здачі проекту в місяцях : ${formData.desiredProjectDeadline}`);
     doc.text(`Обов'язковий термін здачі проекту в місяцях : ${formData.mandatoryProjectDeadline}`);
-
+    doc.text(`Додаткова інформація: `,{ 
+        underline: true
+    });
+    doc.text(formData.additionally);
     doc.end();
 
     return new Promise((resolve, reject) => {
