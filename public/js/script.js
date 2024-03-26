@@ -210,7 +210,6 @@ document.getElementById('projectBriefForm').addEventListener('submit', function 
             document.getElementById('projectBriefForm').reset();
         })
         .catch(error => {
-            // console.error('Помилка fetch:', error);
-            alert("Помилка відправлення!");
+            console.error('Помилка fetch:', error);      
         });
 });
