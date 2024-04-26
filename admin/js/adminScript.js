@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 briefs.forEach(brief => {
                     const tr = document.createElement('tr');
                     tr.innerHTML = `
-                        <td>${brief.contactName}</td>
+                        <td class="contactName">${brief.contactName}</td>
                         <td>
                             <button onclick="downloadPDF('${brief._id}')">Завантажити PDF</button>
                         </td>
