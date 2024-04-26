@@ -13,7 +13,7 @@ const path = require('path');
 const app = express();
 
 // Підключення до бази даних
-mongoose.connect(process.env.MONGOD_LOCAL)
+mongoose.connect(process.env.MONGOD_CONNECT_URI)
   .then(() => console.log('Підключено до MongoDB'))
   .catch(err => console.error(err));
 
